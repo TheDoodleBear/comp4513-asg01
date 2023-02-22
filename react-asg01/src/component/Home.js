@@ -14,10 +14,10 @@ const Home = props => {
                <label>Title</label>
                <input type='text'></input>
                <p>
-                  <Link to='/browse'>
+                  <Link to='/movielist'>
                      <button>Show Matching Movies</button>
                   </Link>
-                  <Link to='/about'>
+                  <Link to='/movielist'>
                      <button>Show All Movies</button>
                   </Link>
                </p>

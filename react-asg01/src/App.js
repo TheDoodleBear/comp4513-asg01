@@ -1,8 +1,11 @@
 import React from 'react';
 import './App.css';
 import { useEffect, useState } from "react";
+import { Routes, Route } from 'react-router-dom';
 import Home from './component/Home.js';
 import LoadingIndicator from './component/LoadingIndicator.js';
+import About from './component/About.js';
+import MovieBrowser from './component/MovieBrowser';
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -11,16 +14,17 @@ function App() {
     const url = 'https://www.randyconnolly.com/funwebdev/3rd/api/movie/movies-brief.php?limit=200';
     if (movies.length <= 0) {
       // First retrieve data from localStorage
-      const isLocalData = localStorage.getItem("key")
+      const isLocalData = localStorage.getItem("key");
       // Is it There?
       if (isLocalData) {
-        console.log("Retrieving data from local storage")
+        console.log("Retrieving data from local storage");
+        console.log(loading);
         const data = JSON.parse(isLocalData);
         console.log(data)
         setMovies(data);
         setLoading(true);
       } else {
-        console.log('Local storage empty. Fetching data remotely')
+        console.log('Local storage empty. Fetching data remotely');
         fetch(url)
           .then(resp => resp.json())
           .then(data => {
@@ -32,25 +36,26 @@ function App() {
     }
   }, [movies]);
 
-  return (
-    <div className="App">
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-      {loading ? <Home /> : <LoadingIndicator />}
-    </div>
-  );
+  if (!loading) {
+    return (
+      <div className="App">
+        <LoadingIndicator />
+      </div>
+    );
+  } else {
+    return (
+      <div className="App">
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/home' element={<Home />} />
+          <Route path='/movielist' element={<MovieBrowser />} />
+          <Route path='/about' element={<About />} />
+        </Routes>
+      </div>
+    );
+  }
+
+
 }
 
 export default App;
