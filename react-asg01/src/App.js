@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import { useEffect, useState } from "react";
 import { Routes, Route } from 'react-router-dom';
 import Home from './component/Home.js';
@@ -34,7 +33,7 @@ function App() {
           });
       }
     }
-  }, [movies]);
+  }, [movies, loading]);
 
   if (!loading) {
     return (
@@ -44,7 +43,7 @@ function App() {
     );
   } else {
     return (
-      <div className="App">
+      <div className="h-screen App">
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/home' element={<Home />} />

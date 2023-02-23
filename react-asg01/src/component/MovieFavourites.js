@@ -6,7 +6,7 @@ const MovieThumb = (props) => {
     return (
         <div className="movie-thumbnail">
             <figure>
-                <img src={Logo}></img>
+                <img src={Logo} alt='some logo'></img>
             </figure>
             <div>
                 <h3>title</h3>
