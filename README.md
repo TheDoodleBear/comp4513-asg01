@@ -1,12 +1,7 @@
-# <React Assignment 01 >
+# React Development
+COMP4513 Assignment 01
 
-## Description
-
-COMP4513 React Assignment. 
-
-
-
-## Table of Contents (Optional)
+## Table of Contents
 
 - [Website](#Website)
 - [Contributor](#Contributor)
@@ -18,16 +13,17 @@ COMP4513 React Assignment.
 - Website Host:
 
 ## Contributor 
-
-Programmer  : Lorenzo Ivan Young
-Email       : lyoun306@mtroyal.ca
-Professor: Randy Connolly
+| | |
+| --- | --- |
+| Primary Contributor | Lorenzo Young |
+| Email | lyoun306@mtroyal.ca |
 
 ## Library
 
 Below are the libraries used for this assignment: 
-    - [Tailwind CSS ](https://tailwindcss.com/)
-    - [React](https://reactjs.org/)
+- [Tailwind CSS ](https://tailwindcss.com/)
+- [React](https://reactjs.org/)
+- [React Spinner Bootsrap](https://react-bootstrap.github.io/components/spinners/)
 
 Provide instructions and examples for use. Include screenshots as needed.
 
@@ -44,10 +40,9 @@ Home Splash Screen:
 - Website: [Unsplash](https://unsplash.com)
 - Photo url: [@jontyson](https://unsplash.com/photos/A-obUh61bKw) 
 
-```md
-![home](https://unsplash.com/photos/A-obUh61bKw)
-```
-
+Loading Animation Tutorial
+ - [Show Loading Screen While Fetching API Data In React](https://www.youtube.com/watch?v=scVRfoTEctc)
+ 
 List your collaborators, if any, with links to their GitHub profiles.
 
 If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
