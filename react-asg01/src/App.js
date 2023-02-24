@@ -1,10 +1,10 @@
 import React from 'react';
 import { useEffect, useState } from "react";
-import { Routes, Route } from 'react-router-dom';
+// import { Routes, Route } from 'react-router-dom';
 import Home from './component/Home.js';
 import LoadingIndicator from './component/LoadingIndicator.js';
-import About from './component/About.js';
-import MovieBrowser from './component/MovieBrowser';
+// import About from './component/About.js';
+// import MovieBrowser from './component/MovieBrowser';
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -43,13 +43,14 @@ function App() {
     );
   } else {
     return (
-      <div className="h-screen App">
-        <Routes>
+      <div className="h-screen flex-row App">
+        <Home />
+        {/* <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/home' element={<Home />} />
           <Route path='/movielist' element={<MovieBrowser />} />
           <Route path='/about' element={<About />} />
-        </Routes>
+        </Routes> */}
       </div>
     );
   }
