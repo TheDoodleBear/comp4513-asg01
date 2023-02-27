@@ -1,23 +1,18 @@
 
 import React from "react";
-import Logo from "../logo.svg";
+import MovieFavouriteThumb from "./MovieFavoriteThumb";
 
 const MovieThumb = (props) => {
     return (
-        <div className="movie-thumbnail">
-            <figure>
-                <img src={Logo} alt='some logo'></img>
-            </figure>
-            <div>
-                <h3>title</h3>
-                <h3>Year</h3>
-                <h3>Rating</h3>
-                <h3>Popularity</h3>
-            </div>
-            <div>
-                <button>❤</button>
-                <button>View</button>
-            </div>
+        <div className="col-span-1 bg-[#279AF1] rounded-t-lg h-full p-2">
+            <h1 className="w-full text-center">Favourites</h1>
+            <MovieFavouriteThumb />
+            <MovieFavouriteThumb />
+            <MovieFavouriteThumb />
+            <MovieFavouriteThumb />
+            <MovieFavouriteThumb />
+            <MovieFavouriteThumb />
+            <MovieFavouriteThumb />
         </div>
     )
 }

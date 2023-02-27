@@ -1,10 +1,11 @@
 import React from 'react';
-import { useEffect, useState } from "react";
-// import { Routes, Route } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Home from './component/Home.js';
 import LoadingIndicator from './component/LoadingIndicator.js';
-// import About from './component/About.js';
-// import MovieBrowser from './component/MovieBrowser';
+import About from './component/About.js';
+import MovieBrowser from './component/MovieBrowser';
+import MovieDetails from './component/MovieDetails.js'
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -13,10 +14,10 @@ function App() {
     const url = 'https://www.randyconnolly.com/funwebdev/3rd/api/movie/movies-brief.php?limit=200';
     if (movies.length <= 0) {
       // First retrieve data from localStorage
-      const isLocalData = localStorage.getItem("key");
+      const isLocalData = localStorage.getItem('key');
       // Is it There?
       if (isLocalData) {
-        console.log("Retrieving data from local storage");
+        console.log('Retrieving data from local storage');
         console.log(loading);
         const data = JSON.parse(isLocalData);
         console.log(data)
@@ -27,8 +28,8 @@ function App() {
         fetch(url)
           .then(resp => resp.json())
           .then(data => {
-            localStorage.setItem("key", JSON.stringify(data));
-            setMovies(data);
+            localStorage.setItem('key', JSON.stringify(data));
+            this.setMovies(data);
             setLoading(true);
           });
       }
@@ -37,20 +38,20 @@ function App() {
 
   if (!loading) {
     return (
-      <div className="App">
+      <div className='App'>
         <LoadingIndicator />
       </div>
     );
   } else {
     return (
-      <div className="h-screen flex-row App">
-        <Home />
-        {/* <Routes>
+      <div className='h-screen App'>
+        <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/home' element={<Home />} />
-          <Route path='/movielist' element={<MovieBrowser />} />
+          <Route path='/moviebrowser' element={<MovieBrowser movies={movies} />} />
           <Route path='/about' element={<About />} />
-        </Routes> */}
+          <Route path='/moviedetails' element={<MovieDetails />} />
+        </Routes>
       </div>
     );
   }

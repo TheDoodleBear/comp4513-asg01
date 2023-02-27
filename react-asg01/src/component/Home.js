@@ -5,23 +5,25 @@ const Home = props => {
    let imgUrl =
       "https://images.unsplash.com/photo-1594909122845-11baa439b7bf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80";
    return (
-      <div className='h-screen bg-fixed bg-center bg-cover p-32' style={{
+      <div className='grid w-screen h-full bg-fixed bg-center bg-cover place-items-center' style={{
          backgroundImage: `url(${imgUrl})`,
       }
       }>
-         <div className="m-auto h-full w-full">
-            <form className='bg-blue-400 m-auto h-full w-full'>
+         <div className="h-[400px] w-[700px] bg-[#279AF1] rounded-xl">
+            <form className='grid w-full h-full  place-items-center'>
                <h1>Movie Browser</h1>
-               <label>Title</label>
-               <input type='text'></input>
-               <p>
+               <div>
+                  <label className="mr-3">Title</label>
+                  <input type='text' className=" ml-3 w-[400px] h-[35px]"></input>
+               </div>
+               <div>
                   <Link to='/movielist'>
-                     <button>Show Matching Movies</button>
+                     <button className="bg-[#4C5760] hover:bg-[#A59E8C] text-white font-bold py-2 px-4 border border-blue-700 rounded mr-3">Show Matching Movies</button>
                   </Link>
                   <Link to='/movielist'>
-                     <button>Show All Movies</button>
+                     <button className="bg-[#4C5760] hover:bg-[#A59E8C] text-white font-bold py-2 px-4 border border-blue-700 rounded ml-3">Show All Movies</button>
                   </Link>
-               </p>
+               </div>
             </form>
          </div>
       </div >

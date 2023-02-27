@@ -1,17 +1,19 @@
-import React from "react";
-import { Link } from 'react-router-dom';
-import HeaderApp from "./HeaderApp";
-import MovieDetails from "./MovieDetails";
-import MovieFavourites from "./MovieFavourites";
-import MovieFilters from "./MovieFilters";
-import MovieList from "./MovieList";
+import React from 'react';
+import HeaderApp from './HeaderApp';
+import MovieFavourites from './MovieFavourites';
+import MovieFilters from './MovieFilters';
+import MovieList from './MovieList';
+import MovieDetails from './MovieDetails';
 
-const MovieBrowser = (props) => {
+const MovieBrowser = props => {
     return (
-        <main>
+        <main className='h-full'>
             <HeaderApp />
-            <h1>Movie Browser Here</h1>
-            <MovieList />
+            <div className='grid grid-cols-6 gap-2 mt-2 h-[calc(100%-88px)]'>
+                <MovieFilters />
+                <MovieList movies={props.movies} />
+                <MovieFavourites />
+            </div>
         </main>
     )
 }

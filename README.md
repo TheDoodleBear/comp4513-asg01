@@ -23,7 +23,7 @@ COMP4513 Assignment 01
 Below are the libraries used for this assignment: 
 - [Tailwind CSS ](https://tailwindcss.com/)
 - [React](https://reactjs.org/)
-- [React Spinner Bootsrap](https://react-bootstrap.github.io/components/spinners/)
+
 
 Provide instructions and examples for use. Include screenshots as needed.
 
@@ -41,7 +41,7 @@ Home Splash Screen:
 - Photo url: [@jontyson](https://unsplash.com/photos/A-obUh61bKw) 
 
 Loading Animation Tutorial
- - [Show Loading Screen While Fetching API Data In React](https://www.youtube.com/watch?v=scVRfoTEctc)
+ - [How To Create an Animated Loading Spinner with Tailwind CSS](https://braydoncoyer.dev/blog/how-to-create-an-animated-loading-spinner-with-tailwind-css)
  
 List your collaborators, if any, with links to their GitHub profiles.
 
