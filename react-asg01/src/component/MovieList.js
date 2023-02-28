@@ -20,7 +20,11 @@ const MovieList = (props) => {
                     </thead>
                     <tbody>
                         {props.movies.map((p) =>
-                            <MovieListItem movies={p} key={p.id} />)}
+                            <MovieListItem 
+                            movies={p} 
+                            key={p.id} 
+                            addFavorites={props.addFavorites}
+                            showSelectedMovie={props.selectedMovie} />)}
                     </tbody>
                 </table>
             </div>

@@ -20,7 +20,7 @@ const Home = props => {
                   <Link to='/moviebrowser'>
                      <button className="bg-[#4C5760] hover:bg-[#A59E8C] text-white font-bold py-2 px-4 border border-blue-700 rounded mr-3">Show Matching Movies</button>
                   </Link>
-                  <Link to='/moviebrowser' movies={props.movies}>
+                  <Link to='/moviebrowser' >
                      <button className="bg-[#4C5760] hover:bg-[#A59E8C] text-white font-bold py-2 px-4 border border-blue-700 rounded ml-3">Show All Movies</button>
                   </Link>
                </div>

@@ -9,7 +9,7 @@ const HeaderApp = function (props) {
                 <Link to='/'>
                     <img src={logo} className='w-20 h-20 ml-3' alt="Logo"></img>
                 </Link>
-                <Link to='/about'>
+                <Link to='/moviedetails'>
                     <button className="bg-[#4C5760] mr-3 hover:bg-[#A59E8C] text-white font-bold py-2 px-4 border border-blue-700 rounded ml-3">About</button>
                 </Link>
             </nav>
