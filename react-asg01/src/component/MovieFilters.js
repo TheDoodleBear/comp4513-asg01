@@ -2,7 +2,7 @@ import React from "react";
 
 const MovieFilters = (props) => {
     return (
-        <div className="col-span-1 bg-[#279AF1] rounded-t-lg h-full p-2">
+        <div className="flex grid-cols-2 col-span-1 bg-[#279AF1] rounded-t-lg h-full p-2">
             <div >
                 <h1 className="w-full text-center">Movie Filters</h1>
                 <div>
@@ -41,6 +41,7 @@ const MovieFilters = (props) => {
                     <button className="bg-[#4C5760] hover:bg-[#A59E8C] text-white font-bold py-2 px-4 border border-blue-700 rounded mr-3">Clear</button>
                 </div>
             </div>
+            <div className="w-3 h-full bg-slate-50"></div>
         </div>
     )
 }

@@ -10,17 +10,17 @@ const MovieList = (props) => {
                     <thead className='bg-blue-800'>
                         <tr>
                             <th className='text-center'><span ></span></th>
-                            <th className='text-center'><span class>Title</span></th>
+                            <th className='text-center'><span>Title</span></th>
                             <th className='text-center'><span>Year</span></th>
                             <th className='text-center'><span>Rating</span></th>
-                            <th className='text-center'><span>Popularity</span></th>
+                            <th className='text-center max-w-[40px]'><span>Overall Interest</span></th>
                             <th className='text-center'><span></span></th>
                             <th className='text-center'><span></span></th>
                         </tr>
                     </thead>
                     <tbody>
                         {props.movies.map((p) =>
-                            <MovieListItem movies={p} key={p.id} />)};
+                            <MovieListItem movies={p} key={p.id} />)}
                     </tbody>
                 </table>
             </div>

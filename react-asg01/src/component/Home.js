@@ -10,17 +10,17 @@ const Home = props => {
       }
       }>
          <div className="h-[400px] w-[700px] bg-[#279AF1] rounded-xl">
-            <form className='grid w-full h-full  place-items-center'>
+            <form className='grid w-full h-full place-items-center'>
                <h1>Movie Browser</h1>
                <div>
                   <label className="mr-3">Title</label>
                   <input type='text' className=" ml-3 w-[400px] h-[35px]"></input>
                </div>
                <div>
-                  <Link to='/movielist'>
+                  <Link to='/moviebrowser'>
                      <button className="bg-[#4C5760] hover:bg-[#A59E8C] text-white font-bold py-2 px-4 border border-blue-700 rounded mr-3">Show Matching Movies</button>
                   </Link>
-                  <Link to='/movielist'>
+                  <Link to='/moviebrowser' movies={props.movies}>
                      <button className="bg-[#4C5760] hover:bg-[#A59E8C] text-white font-bold py-2 px-4 border border-blue-700 rounded ml-3">Show All Movies</button>
                   </Link>
                </div>

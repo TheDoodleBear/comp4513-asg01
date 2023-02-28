@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './component/Home.js';
 import LoadingIndicator from './component/LoadingIndicator.js';
 import About from './component/About.js';
-import MovieBrowser from './component/MovieBrowser';
+import MovieBrowser from './component/MovieBrowser.js';
 import MovieDetails from './component/MovieDetails.js'
 
 function App() {
