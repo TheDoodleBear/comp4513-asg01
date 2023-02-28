@@ -2,6 +2,7 @@ import React from 'react';
 import MovieListItem from './MovieListItem';
 
 const MovieList = (props) => {
+
     return (
         <div className='col-span-4 bg-[#279AF1] rounded-t-lg h-full p-2'>
             <h1 className='w-full text-center'>List/ Matches</h1>

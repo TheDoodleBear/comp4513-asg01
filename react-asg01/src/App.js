@@ -10,7 +10,6 @@ import MovieDetails from './component/MovieDetails.js'
 function App() {
   const [loading, setLoading] = useState(false);
   const [movies, setMovies] = useState([]);
-  const [favourites, setfavourites] = useState([]);
   useEffect(() => {
     const url = 'https://www.randyconnolly.com/funwebdev/3rd/api/movie/movies-brief.php?limit=200';
     if (movies.length <= 0) {
@@ -36,16 +35,14 @@ function App() {
     }
   }, [movies, loading]);
 
+  const [favourites, setfavourites] = useState([]);
   const addFavorites = (movie) => {
     const copyFavs = cloneDeep(favourites);
     let found = copyFavs.find(p => p.id === movie.id);
     if (found) return;
-
     copyFavs.push(movie);
-
     setfavourites(copyFavs);
   }
-
 
   const removeFavorites = (movies) => {
     let filteredFavs = favourites.filter(p => p.id !== movies.id);
@@ -57,6 +54,23 @@ function App() {
   const showSelectedMovie = (id) => {
     setselectedMovie(id);
   }
+
+  const [filterString, setfilterString] = useState("");
+
+  const homeFilterTitle = (string) => {
+    setfilterString(string);
+  };
+
+  const [filteredMovie, setFilteredMovie] = useState([]);
+
+
+  const filterMovie = ()=>{
+    let filter = movies.filter( m => m.title.toString() === filterString)
+    console.log("filter" + filter)
+    setFilteredMovie(filter)
+  }
+
+
   
   if (!loading) {
     return (
@@ -68,13 +82,17 @@ function App() {
     return (
       <div className='h-screen App'>
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/home' element={<Home />} />
+          <Route path='/' element={<Home homeFilterTitle={homeFilterTitle} 
+          filterMovie={filterMovie}/>} />
+          <Route path='/home' element={<Home homeFilterTitle={homeFilterTitle} 
+          filterMovie={filterMovie}/>} />
           <Route path='/moviebrowser' element={<MovieBrowser movies={movies} 
-          favourites={favourites}      
+          favourites={favourites}  
+          filterString={filterString}    
           showSelectedMovie={showSelectedMovie}    
           removeFavorites={removeFavorites}
-          addFavorites={addFavorites} />} />
+          addFavorites={addFavorites} 
+          filteredMovie={filteredMovie}/>} />
           <Route path='/moviedetails' element={<MovieDetails 
           movies={movies} 
           favourites={favourites}      

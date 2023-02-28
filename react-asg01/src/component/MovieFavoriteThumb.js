@@ -13,7 +13,6 @@ const MovieFavouriteThumb = props => {
         props.removeFavorites(props.favourites);
      };
     
-
     const replaceImage = (error) => {
         // const placeholder = 'https://via.placeholder.com/92'
         //replacement of broken Image
