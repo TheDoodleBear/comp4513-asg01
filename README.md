@@ -11,6 +11,7 @@ COMP4513 Assignment 01
 ## Website
 - Website URL:
 - Website Host:
+- GitHub Repo: [https://github.com/TheDoodleBear/COMP4513-Asg01.git](https://github.com/TheDoodleBear/COMP4513-Asg01.git)
 
 ## Contributor 
 | | |
@@ -23,6 +24,8 @@ COMP4513 Assignment 01
 Below are the libraries used for this assignment: 
 - [Tailwind CSS ](https://tailwindcss.com/)
 - [React](https://reactjs.org/)
+- [React Bootstrap Modal](https://react-bootstrap.github.io/)
+- [React Number Format](https://github.com/s-yadav/react-number-format)
 
 
 Provide instructions and examples for use. Include screenshots as needed.
@@ -42,6 +45,9 @@ Home Splash Screen:
 
 Loading Animation Tutorial
  - [How To Create an Animated Loading Spinner with Tailwind CSS](https://braydoncoyer.dev/blog/how-to-create-an-animated-loading-spinner-with-tailwind-css)
+
+ Empty Image Place Holder
+ - [No Image Available]('https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg')
  
 List your collaborators, if any, with links to their GitHub profiles.
 

@@ -19,7 +19,6 @@ function App() {
       // Is it There?
       if (isLocalData) {
         console.log('Retrieving data from local storage');
-        console.log(loading);
         const data = JSON.parse(isLocalData);
         console.log(data)
         setMovies(data);
@@ -30,7 +29,7 @@ function App() {
           .then(resp => resp.json())
           .then(data => {
             localStorage.setItem('key', JSON.stringify(data));
-            this.setMovies(data);
+            setMovies(data);
             setLoading(true);
           });
       }
@@ -46,7 +45,6 @@ function App() {
 
     setfavourites(copyFavs);
   }
-  console.log(favourites)
 
 
   const removeFavorites = (movies) => {

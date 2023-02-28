@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const MovieFavouriteThumb = props => {
+    
+    const imgURL = `https://image.tmdb.org/t/p/w92/`;
 
     const handleViewClick = () => {
         props.showSelectedMovie(props.favourites.id);
@@ -10,15 +12,19 @@ const MovieFavouriteThumb = props => {
     const removeFav = (e) => {
         props.removeFavorites(props.favourites);
      };
-
     
-    const imgURL = `https://image.tmdb.org/t/p/w92${props.favourites.poster}`;
+
+    const replaceImage = (error) => {
+        // const placeholder = 'https://via.placeholder.com/92'
+        //replacement of broken Image
+        error.target.src = 'https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg'; 
+    }
     return (
         <div className="flex items-center p-3 flex-nowrap group static ">
             
             <figure onClick={handleViewClick}>
                 <Link to='/moviedetails'>
-                <img src={imgURL} alt={props.favourites.title} title={props.favourites.title}></img>
+                <img src={imgURL + props.favourites.poster} alt={props.favourites.title} title={props.favourites.title} onError={replaceImage}></img>
                 </Link>
             </figure>
             <div className="ml-3">
