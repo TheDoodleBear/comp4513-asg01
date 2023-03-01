@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { DynamicStar } from 'react-dynamic-star';
 import HeaderApp from "./HeaderApp";
 import ImagePoster from "./ImagePoster"
+import MovieFavourites from "./MovieFavourites";
+import StarRating from "./StarRating";
 
 const MovieDetails = props => {
     let bgUrl =
@@ -14,7 +16,7 @@ const MovieDetails = props => {
     }
 
     const addFav = () => {
-        props.addFavorites(movie);
+        props.addFavourites(movie);
      }
         
      const movie = props.movies.find(m=> m.id === props.selectedMovie);
@@ -26,18 +28,13 @@ const MovieDetails = props => {
         })
        } 
         return (
-
             <div className="h-full">
                 <HeaderApp />
-                <div className="grid h-[calc(100%-88px)] grid-cols-3 mt-2 bg-fixed bg-center bg-cover rounded-lg" style={{
-                    backgroundImage: `url(${bgUrl})`,
-                }
-                }>
+                <div className="flex mt-2 h-full" >
+                <div className="grid mr-2 h-full grid-cols-3 rounded-lg bg-fixed bg-center bg-cover" style={{
+                    backgroundImage: `url(${bgUrl})`,}}>
                     <div className="mt-auto mb-auto">
                         <h1>{movie.title}</h1>
-                        {/* <figure className="p-2">
-                            <img src={imgUrl+movie.poster} alt={movie.title} title={movie.title} onError={replaceImage}></img>
-                        </figure> */}
                         <ImagePoster movie={movie}/>
                     </div>
                     <div className="grid h-full grid-rows-6 gap-2">
@@ -58,19 +55,20 @@ const MovieDetails = props => {
                                 <p>{movie.details.overview}</p>
                             </div>
                             <div>
-                                <p>{movie.details.genres.map(genre=><span className="m-1">{genre.name}</span>)}</p>
+                                <h6>Genre</h6>
+                                <p>{movie.details.genres?.map((genre, id)=><span className="m-1" key={id}>{genre.name}</span>)}</p>
                             </div>
                         </div>
                         <div className="row-start-4 row-end-6 p-2 rounded-lg bg-slate-300">
                             <h1>Rating</h1>
                             <div>
-                            <DynamicStar rating={3} />
+                            <StarRating/>
                             </div>
                             <span>{movie.ratings.popularity}, {movie.ratings.average}, {movie.ratings.count}</span>
                             <div>
                                 <h1>Rate</h1>
                                 <div>
-                                    <DynamicStar rating={3} />
+                                    <DynamicStar rating={3}  width={25}/>
                                 </div>
                             </div>  
                         </div>
@@ -78,9 +76,14 @@ const MovieDetails = props => {
                     <div className="grid justify-end w-full h-full">
                         <div className="grid grid-row-2 grid-col-1 h-[80px] w-[200px] mt-2 mr-2">
                             <button className="w-full mx-auto bg-[#4C5760] hover:bg-[#A59E8C] text-white font-bold py-1 px-3 border border-blue-700 rounded mr-3" onClick={closeDetailedView}>Close</button>
-                            <button className="w-full mx-auto bg-[#4C5760] hover:bg-[#A59E8C] text-white font-bold py-1 px-3 border border-blue-700 rounded mr-3" onClick={addFav}>❤ Add to Favorites</button>
+                            <button className="w-full mx-auto bg-[#4C5760] hover:bg-[#A59E8C] text-white font-bold py-1 px-3 border border-blue-700 rounded mr-3" onClick={addFav}>❤ Add to Favourites</button>
                         </div>
                     </div>
+                </div>
+                <MovieFavourites 
+                favourites={props.favourites}
+                selectedMovie={props.showSelectedMovie} 
+                removeFavourites={props.removeFavourites}/>
                 </div>
             </div>
         )

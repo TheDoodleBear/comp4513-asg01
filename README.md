@@ -48,7 +48,7 @@ Loading Animation Tutorial
  - [How To Create an Animated Loading Spinner with Tailwind CSS](https://braydoncoyer.dev/blog/how-to-create-an-animated-loading-spinner-with-tailwind-css)
 
  Empty Image Place Holder
- - [No Image Available]('https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg')
+ - [No Image Available](https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg)
  
 List your collaborators, if any, with links to their GitHub profiles.
 
