@@ -8,13 +8,12 @@ const MovieBrowser = props => {
   return (
     <main className="h-full">
       <HeaderApp />
-      <div className="flex mt-2 h-full">
+      <div className="flex h-full mt-2">
         <MovieFilters />
         <MovieList
           filterString={props.filterString}
           movies={props.movies}
-          movieFiltered={props.movieFiltered}
-          isFiltered={props.isFiltered}
+          moviesToPass={props.moviesToPass}
           selectedMovie={props.showSelectedMovie}
           addFavourites={props.addFavourites}
         />

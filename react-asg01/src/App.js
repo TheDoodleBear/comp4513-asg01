@@ -66,13 +66,20 @@ function App() {
     setselectedMovie(id);
   };
 
-  const [movieFiltered, setMovieFiltered] = useState([]);
-  const [isFiltered, setisFiltered] = useState(false);
+  const [moviesToPass, setMoviesToPass] = useState([]);
 
   const filterMovie = (movie, string) => {
-    let filter = movie.filter(m => m.title.toLowerCase().includes(string));
-    setMovieFiltered(filter);
-    setisFiltered(true);
+    //  If the string is not empty filter movies based on string passed
+    if (string !== "") {
+      let filter = movie.filter(m =>
+        m.title.toString().toLowerCase().includes(string)
+      );
+      // Update moviesToPass state with filtered movies
+      setMoviesToPass(filter);
+    } else {
+      // If String is empty just pass the movie through props
+      setMoviesToPass(movie);
+    }
   };
   // Check if data is being retrieved
   if (!loading) {
@@ -100,8 +107,7 @@ function App() {
               <MovieBrowser
                 movies={movies}
                 favourites={favourites}
-                movieFiltered={movieFiltered}
-                isFiltered={isFiltered}
+                moviesToPass={moviesToPass}
                 showSelectedMovie={showSelectedMovie}
                 removeFavourites={removeFavourites}
                 addFavourites={addFavourites}

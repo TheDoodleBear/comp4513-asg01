@@ -11,8 +11,18 @@ const Home = props => {
     setfilterString(value);
   };
 
-  const showMatchMovies = () => {
-    props.filterMovie(props.movies, filterString);
+  const showMatchMovies = e => {
+    if (filterString === "") {
+      e.preventDefault();
+      alert("Empty Search Parameter. Please Try Again");
+    } else {
+      props.filterMovie(props.movies, filterString);
+    }
+  };
+
+  const showAllMovies = () => {
+    const string = "";
+    props.filterMovie(props.movies, string);
   };
 
   return (
@@ -43,7 +53,10 @@ const Home = props => {
               </button>
             </Link>
             <Link to="/moviebrowser">
-              <button className="bg-[#4C5760] hover:bg-[#A59E8C] text-white font-bold py-2 px-4 border border-blue-700 rounded ml-3">
+              <button
+                className="bg-[#4C5760] hover:bg-[#A59E8C] text-white font-bold py-2 px-4 border border-blue-700 rounded ml-3"
+                onClick={showAllMovies}
+              >
                 Show All Movies
               </button>
             </Link>

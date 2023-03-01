@@ -2,19 +2,6 @@ import React from 'react';
 import MovieListItem from './MovieListItem';
 
 const MovieList = (props) => {
-    let moviesToPass = [];
-    if(props.isFiltered){
-         moviesToPass = props.movieFiltered
-    }else(
-         moviesToPass = props.movies
-    )
-
-    // let [moviesToPass, setMoviesToPass] = useState([]);
-    //     if(props.isFiltered){
-    //         setMoviesToPass(props.movieFiltered)
-    // }else(
-    //     setMoviesToPass(props.movies)
-    // )
 
     
     return (
@@ -34,7 +21,7 @@ const MovieList = (props) => {
                         </tr>
                     </thead>
                     <tbody>
-                        {moviesToPass?.map((p) =>
+                        {props.moviesToPass?.map((p) =>
                             <MovieListItem 
                             movies={p} 
                             key={p.id} 
