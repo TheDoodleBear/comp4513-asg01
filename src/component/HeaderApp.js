@@ -8,7 +8,7 @@ const HeaderApp = function(props) {
     <header className="h-[80px] w-full col-span-3 bg-[#279AF1] rounded-b-lg">
       <nav className="flex flex-wrap items-center justify-between ">
         <Link to="/">
-          <img src={logo} className="w-20 h-20 ml-3" alt="Logo" />
+          <img src={logo} className="w-20 h-20 ml-3" alt="Missing Logo" />
         </Link>
         <AboutDialog />
       </nav>
