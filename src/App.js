@@ -94,14 +94,17 @@ function App() {
       <div className="h-screen App">
         <Routes>
           <Route
+            exact
             path="/"
             element={<Home movies={movies} filterMovie={filterMovie} />}
           />
           <Route
+            exact
             path="/home"
             element={<Home movies={movies} filterMovie={filterMovie} />}
           />
           <Route
+            exact
             path="/moviebrowser"
             element={
               <MovieBrowser
@@ -115,6 +118,7 @@ function App() {
             }
           />
           <Route
+            exact
             path="/moviedetails"
             element={
               <MovieDetails
