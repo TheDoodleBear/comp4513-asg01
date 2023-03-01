@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# React Development
+COMP4513 Assignment 01
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
 
-## Available Scripts
+- [Website](#Website)
+- [Contributor](#Contributor)
+- [Library](#Library)
+- [Credits](#credits)
 
-In the project directory, you can run:
+## Website
+- Website URL:
+- Website Host:
+- GitHub Repo: [https://github.com/TheDoodleBear/COMP4513-Asg01.git](https://github.com/TheDoodleBear/COMP4513-Asg01.git)
 
-### `npm start`
+## Contributor 
+| | |
+| --- | --- |
+| Primary Contributor | Lorenzo Young |
+| Email | lyoun306@mtroyal.ca |
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Library
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Below are the libraries used for this assignment: 
+- [Tailwind CSS ](https://tailwindcss.com/)
+- [React](https://reactjs.org/)
+- [React Bootstrap Modal](https://react-bootstrap.github.io/)
+- [React Number Format](https://github.com/s-yadav/react-number-format)
+- [React Dynamic Star](https://www.npmjs.com/package/react-dynamic-star)
 
-### `npm test`
+## Credits
+Home Splash Screen:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Photo by: Jon Tyson
+- Website: [Unsplash](https://unsplash.com)
+- Photo url: [@jontyson](https://unsplash.com/photos/A-obUh61bKw) 
 
-### `npm run build`
+Loading Animation Tutorial
+ - [How To Create an Animated Loading Spinner with Tailwind CSS](https://braydoncoyer.dev/blog/how-to-create-an-animated-loading-spinner-with-tailwind-css)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ Empty Image Place Holder
+ - [No Image Available](https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg)
