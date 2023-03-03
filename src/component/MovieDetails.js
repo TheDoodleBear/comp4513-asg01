@@ -4,13 +4,13 @@ import { DynamicStar } from 'react-dynamic-star';
 import HeaderApp from "./HeaderApp";
 import ImagePoster from "./ImagePoster"
 import MovieFavourites from "./MovieFavourites";
-import StarRating from "./StarRating";
 
 const MovieDetails = props => {
     let bgUrl =
         "https://images.unsplash.com/photo-1594909122845-11baa439b7bf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80";
 
     const navigationView = useNavigate();
+    
     const closeDetailedView = () => {
         navigationView(-1);
     }
@@ -21,6 +21,7 @@ const MovieDetails = props => {
         
      const movie = props.movies.find(m=> m.id === props.selectedMovie);
 
+     const movieRating = movie.ratings.average/ 2;
     const formatNumber = (q) => {
         return q.toLocaleString('en-US', {
             style: 'currency',
@@ -30,8 +31,8 @@ const MovieDetails = props => {
         return (
             <div className="h-full">
                 <HeaderApp />
-                <div className="flex mt-2 h-full" >
-                <div className="grid mr-2 h-full grid-cols-3 rounded-lg bg-fixed bg-center bg-cover" style={{
+                <div className="flex h-full mt-2" >
+                <div className="grid h-full grid-cols-3 mr-2 bg-fixed bg-center bg-cover rounded-lg" style={{
                     backgroundImage: `url(${bgUrl})`,}}>
                     <div className="mt-auto mb-auto">
                         <h1>{movie.title}</h1>
@@ -62,9 +63,14 @@ const MovieDetails = props => {
                         <div className="row-start-4 row-end-6 p-2 rounded-lg bg-slate-300">
                             <h1>Rating</h1>
                             <div>
-                            <StarRating/>
+                                <DynamicStar rating={movieRating.toFixed(1)} width={25} height={25} />
+                                    <div>
+                                    <span>
+                                        {movieRating.toFixed(1)} out of 5
+                                    </span>
+                                    </div>
                             </div>
-                            <span>{movie.ratings.popularity}, {movie.ratings.average}, {movie.ratings.count}</span>
+                            {/* <span>{movie.ratings.popularity}, {movie.ratings.average}, {movie.ratings.count}</span> */}
                             <div>
                                 <h1>Rate</h1>
                                 <div>

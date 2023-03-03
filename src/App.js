@@ -45,6 +45,8 @@ function App() {
     [movies, loading]
   );
 
+  console.log(movies);
+
   // Add Movies to Favourites
   const [favourites, setfavourites] = useState([]);
   const addFavourites = movie => {
@@ -81,17 +83,34 @@ function App() {
       setMoviesToPass(movie);
     }
   };
+
+  // const generateGenderDataForDropdown = () => {
+  //   return [...new Set(movies.map(item => item.details))];
+  // };
+  // const details = generateGenderDataForDropdown();
+  // const generateGenderDataForDropdownx = () => {
+  //   return [...new Set(details.map(item => item.genres))];
+  // };
+  // const genres = generateGenderDataForDropdownx();
+  // const generateGenderDataForDropdownxx = () => {
+  //   return [...new Set(genres?.map(item => item.name ))];
+  // };
+
+  // console.log(generateGenderDataForDropdownxx());
+
   // Check if data is being retrieved
   if (!loading) {
     // Show loading screen if true
     return (
-      <div className="h-screen App">
+      <div className="h-full App">
         <LoadingIndicator />
+        {/* <HeaderApp />
+        <MovieFilters /> */}
       </div>
     );
   } else {
     return (
-      <div className="h-screen App">
+      <div className="h-full App">
         <Routes>
           <Route
             exact

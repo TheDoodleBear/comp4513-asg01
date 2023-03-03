@@ -1,11 +1,13 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import StarRating from "./StarRating";
+import {DynamicStar} from "react-dynamic-star";
 
 const MovieListItem = props => {
   const imgURL = `https://image.tmdb.org/t/p/w92/`;
   const release_year = props.movies.release_date;
   const year = release_year.substring(4, 0);
+
+  const movieRating = props.movies.ratings.average / 2;
 
   const onViewClick = () => {
     props.showSelectedMovie(props.movies.id);
@@ -49,10 +51,13 @@ const MovieListItem = props => {
           {year}
         </span>
       </td>
-      <td className="max-w-[40px] text-center">
-        <span>
-          <StarRating />
-        </span>
+      <td className="min-w-[100px] h-[138px] text-center p-auto grid grid-row-2 gap-1 place-content-center">
+        <DynamicStar rating={movieRating.toFixed(1)} width={25} height={25} />
+        <div>
+          <span>
+            {movieRating.toFixed(1)} out of 5
+          </span>
+        </div>
       </td>
       <td className="text-center">
         <span>

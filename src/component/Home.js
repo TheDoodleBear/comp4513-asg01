@@ -27,7 +27,7 @@ const Home = props => {
 
   return (
     <div
-      className="grid w-full h-full bg-fixed bg-center bg-cover place-items-center"
+      className="grid w-full h-screen bg-fixed bg-center bg-cover place-items-center"
       style={{
         backgroundImage: `url(${imgUrl})`
       }}
