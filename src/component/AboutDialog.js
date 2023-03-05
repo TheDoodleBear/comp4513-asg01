@@ -77,6 +77,15 @@ const AboutDialog = props => {
                   [React Number Format]
                 </a>
               </li>
+              <li>
+                <a
+                  href="https://react-icons.github.io/react-icons/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  [React Icons module for Font Awesome Star]
+                </a>
+              </li>
             </ul>
           </div>
           <h4>Credits</h4>
@@ -146,7 +155,7 @@ const AboutDialog = props => {
             </ul>
           </div>
           <div>
-            <label>React Dynamic Star</label>
+            <label>React Dynamic Star Tutorial</label>
             <ul>
               <li>
                 <a
@@ -155,6 +164,20 @@ const AboutDialog = props => {
                   rel="noreferrer"
                 >
                   [React Dynamic Star]
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <label>Font Awesome Icons</label>
+            <ul>
+              <li>
+                <a
+                  href="https://react-icons.github.io/react-icons/icons?name=fa"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  [Font Awesome]
                 </a>
               </li>
             </ul>
