@@ -104,8 +104,7 @@ function App() {
     return (
       <div className="h-full App">
         <LoadingIndicator />
-        {/* <HeaderApp />
-        <MovieFilters /> */}
+        {/* <DynamicStarRating /> */}
       </div>
     );
   } else {

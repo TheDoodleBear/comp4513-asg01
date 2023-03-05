@@ -26,7 +26,7 @@ Below are the libraries used for this assignment:
 - [React](https://reactjs.org/)
 - [React Bootstrap Modal](https://react-bootstrap.github.io/)
 - [React Number Format](https://github.com/s-yadav/react-number-format)
-- [React Dynamic Star](https://www.npmjs.com/package/react-dynamic-star)
+- [React Dynamic Star](https://www.youtube.com/watch?v=eDw46GYAIDQ)
 
 ## Credits
 Home Splash Screen:

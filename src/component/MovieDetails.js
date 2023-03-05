@@ -1,14 +1,13 @@
 import React from "react";
 import { useNavigate } from 'react-router-dom';
-import { DynamicStar } from 'react-dynamic-star';
 import HeaderApp from "./HeaderApp";
 import ImagePoster from "./ImagePoster"
 import MovieFavourites from "./MovieFavourites";
+import DynamicStarRating from "./DynamicStarRating";
 
 const MovieDetails = props => {
     let bgUrl =
         "https://images.unsplash.com/photo-1594909122845-11baa439b7bf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80";
-
     const navigationView = useNavigate();
     
     const closeDetailedView = () => {
@@ -21,7 +20,7 @@ const MovieDetails = props => {
         
      const movie = props.movies.find(m=> m.id === props.selectedMovie);
 
-     const movieRating = movie.ratings.average/ 2;
+     const movieRating =  movie.ratings.average/ 2;
     const formatNumber = (q) => {
         return q.toLocaleString('en-US', {
             style: 'currency',
@@ -63,18 +62,13 @@ const MovieDetails = props => {
                         <div className="row-start-4 row-end-6 p-2 rounded-lg bg-slate-300">
                             <h1>Rating</h1>
                             <div>
-                                <DynamicStar rating={movieRating.toFixed(1)} width={25} height={25} />
-                                    <div>
-                                    <span>
-                                        {movieRating.toFixed(1)} out of 5
-                                    </span>
-                                    </div>
+                                <DynamicStarRating movieRating={movieRating}/>
                             </div>
                             {/* <span>{movie.ratings.popularity}, {movie.ratings.average}, {movie.ratings.count}</span> */}
                             <div>
                                 <h1>Rate</h1>
                                 <div>
-                                    <DynamicStar rating={3}  width={25}/>
+                                    <DynamicStarRating movieRating={0}/>
                                 </div>
                             </div>  
                         </div>

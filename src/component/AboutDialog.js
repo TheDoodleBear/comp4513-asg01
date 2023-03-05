@@ -77,15 +77,6 @@ const AboutDialog = props => {
                   [React Number Format]
                 </a>
               </li>
-              <li>
-                <a
-                  href="https://www.npmjs.com/package/react-dynamic-star"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  [React Dynamic Star]
-                </a>
-              </li>
             </ul>
           </div>
           <h4>Credits</h4>
@@ -151,6 +142,20 @@ const AboutDialog = props => {
                     [No Image Available]
                   </a>
                 </span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <label>React Dynamic Star</label>
+            <ul>
+              <li>
+                <a
+                  href="https://www.youtube.com/watch?v=eDw46GYAIDQ"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  [React Dynamic Star]
+                </a>
               </li>
             </ul>
           </div>
